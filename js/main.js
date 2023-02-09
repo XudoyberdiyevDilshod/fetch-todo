@@ -10,7 +10,7 @@ const localData = localStorage.getItem("token");
 console.log(localData);
 
 if (!localData) {
-  location.replace("login.html");
+  location.replace("register.html");
 }
 
 elLogOutBtn.addEventListener("click", function () {
