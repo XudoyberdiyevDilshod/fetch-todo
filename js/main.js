@@ -2,16 +2,15 @@ const elForm = document.querySelector(".js-form");
 const elList = document.querySelector(".js-list");
 const elInput = document.querySelector(".js-input");
 const elLogOutBtn = document.querySelector(".js-logout");
+const elAllCount = document.querySelector(".js-all-count");
+const elComplCount = document.querySelector(".js-completed-count");
+const elUnComplCount = document.querySelector(".js-uncompleted-count");
 const localData = localStorage.getItem("token");
-let elAllCount = document.querySelector(".js-all-count");
-let elComplCount = document.querySelector(".js-completed-count");
-let elUnComplCount = document.querySelector(".js-uncompleted-count");
-let elAllBtns = document.querySelector(".js-btns");
 
 console.log(localData);
 
 if (!localData) {
-  location.replace("login.html");
+  location.replace("register.html");
 }
 
 elLogOutBtn.addEventListener("click", function () {
