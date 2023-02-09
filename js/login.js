@@ -2,13 +2,14 @@ const elForm = document.querySelector(".js-form");
 const elPasswordInput = document.querySelector(".js-password");
 const elEye = document.querySelector(".js-eye");
 const elNameInput = document.querySelector(".js-name");
-const localData = localStorage.getItem("token");
+const elReg = document.querySelector(".js-reg");
 
-console.log(localData);
 
-if (!localData) {
-  location.replace("register.html");
-}
+elReg.addEventListener("click", function(evt) {
+  if(evt.target.matches('.js-reg')){
+    location.replace('register.html')
+  }
+})
 
 elEye.addEventListener("mousedown", function () {
   elPasswordInput.type = "text";
@@ -16,7 +17,6 @@ elEye.addEventListener("mousedown", function () {
 elEye.addEventListener("mouseup", function () {
   elPasswordInput.type = "password";
 });
-
 
 elForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
@@ -41,7 +41,6 @@ elForm.addEventListener("submit", function (evt) {
     .catch((err) => console.log(err));
 });
 
-
 // DARK MODE
 let elModeBtn = document.querySelector(".js-mode");
 let theme = false;
@@ -55,11 +54,11 @@ elModeBtn.addEventListener("click", function () {
 
 function changeTheme() {
   if (window.localStorage.getItem("theme") == "dark") {
-    login.style.color = "white"
+    login.style.color = "white";
     elModeBtn.innerHTML = `BRIGHT <img class="ms-1" src="./images/day-mode.png" alt="night-mode" width="20" height="20">`;
     document.body.classList.add("dark");
   } else {
-    login.style.color = "Black"
+    login.style.color = "Black";
     elModeBtn.innerHTML = `DARK <img class="ms-2" src="./images/night-mode.png" alt="night-mode" width="20" height="20">`;
     document.body.classList.remove("dark");
   }

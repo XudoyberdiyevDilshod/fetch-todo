@@ -2,6 +2,13 @@ const elForm = document.querySelector(".js-form");
 const elPasswordInput = document.querySelector(".js-password");
 const elNameInput = document.querySelector(".js-name");
 const elEye = document.querySelector(".js-eye");
+const elLogin = document.querySelector(".js-login");
+
+elLogin.addEventListener("click", function(evt){
+  if(evt.target.matches('.js-login')){
+    location.replace('login.html')
+  }
+})
 
 elEye.addEventListener("mousedown", function () {
   elPasswordInput.type = "text";
