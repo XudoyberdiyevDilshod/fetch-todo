@@ -2,6 +2,13 @@ const elForm = document.querySelector(".js-form");
 const elPasswordInput = document.querySelector(".js-password");
 const elEye = document.querySelector(".js-eye");
 const elNameInput = document.querySelector(".js-name");
+const localData = localStorage.getItem("token");
+
+console.log(localData);
+
+if (!localData) {
+  location.replace("register.html");
+}
 
 elEye.addEventListener("mousedown", function () {
   elPasswordInput.type = "text";
