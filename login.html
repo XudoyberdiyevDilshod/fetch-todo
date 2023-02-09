@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login</title>
+   <!-- Bootstrapt css -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <!-- Main css -->
+   <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+   <div class="container">
+     <div class="row">
+       <div class="col-6 offset-3 shadow p-5 mt-5 position-relative">
+         <h2 id="login" class="h2 text-center mb-3">Login</h2>
+         <button class="js-mode position-absolute rounded ms-5 d-flex align-items-center p-2">DARK<img class="ms-2" src="./images/night-mode.png" alt="night-mode" width="20" height="20"></button>
+          <form class="js-form">
+            <input class="form-control mb-3 js-name" type="text" placeholder="User name">
+            <div class="input-group mb-3">
+              <input class="form-control js-password" type="password" placeholder="Password">
+              <button class="btn btn-info js-eye" type="button">
+                <img src="./images/eye.png" alt="eye" width="25" height="25">
+              </button>
+            </div>
+            <button class="btn btn-success" type="submit">SUBMIT</button>
+          </form>
+        </div>
+      </div>
+   </div>
+   <!-- login js -->
+   <script src="./js/login.js"></script>
+</body>
+</html>
