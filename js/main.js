@@ -31,13 +31,13 @@ const renderTodo = (arr, node) => {
   arr.allTodos.forEach((todo) => {
     node.innerHTML += `
     <li class="list-group-item d-flex align-items-center ">
-    <input class="form-check-input me-3 js-chechbox" type="checkbox" data-todo-id=${
+    <input class="form-check-input m-0 js-chechbox" type="checkbox" data-todo-id=${
       todo._id
     } ${todo.completed ? "checked" : ""}>
-    <span class="flex-grow-1" style="${
+    <span class="ms-3" style="${
       todo.completed ? "text-decoration: line-through " : ""
     };">${todo.task}</span>
-    <button class="d-flex align-items-center btn btn-warning me-2 todo-edit" data-todo-id=${
+    <button class="ms-auto d-flex align-items-center btn btn-warning me-2 todo-edit" data-todo-id=${
       todo._id
     }>EDIT <img src="./images/edit.png" alt="edit" width="25" height="25"></button>
     <button class=" todo-delete d-flex align-items-center btn btn-danger" data-todo-id=${
